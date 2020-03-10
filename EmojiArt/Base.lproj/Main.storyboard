@@ -41,6 +41,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dropZone" destination="GSS-ZI-XWQ" id="kzH-Tr-QFx"/>
+                        <outlet property="emojiArtView" destination="2O0-xZ-9qE" id="GEp-ky-MHF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

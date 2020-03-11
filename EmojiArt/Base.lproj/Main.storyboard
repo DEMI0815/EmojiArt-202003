@@ -39,7 +39,13 @@
                             <outlet property="delegate" destination="pwA-F3-bKR" id="0Qh-3k-9oK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="GZ0-jf-1Ta"/>
+                    <navigationItem key="navigationItem" id="GZ0-jf-1Ta">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cf6-RR-2jb">
+                            <connections>
+                                <action selector="newEmojiArt:" destination="pwA-F3-bKR" id="HVJ-6a-qep"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZA-cb-QBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -50,14 +56,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmojiArtViewController" customModule="EmojiArt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSS-ZI-XWQ">
-                                <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-xZ-9qE" customClass="EmojiArtView" customModule="EmojiArt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                 </subviews>
@@ -94,7 +100,7 @@
                 <splitViewController id="o1a-le-nU4" sceneMemberID="viewController">
                     <connections>
                         <segue destination="8xu-me-sv7" kind="relationship" relationship="masterViewController" id="34r-6V-8Zi"/>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" id="lz2-dC-29Z"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="MXl-fr-t91"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXz-s9-4lw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

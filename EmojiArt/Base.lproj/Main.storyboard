@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o1a-le-nU4">
-    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="pwA-F3-bKR" customClass="EmojiArtDocumentTableViewController" customModule="EmojiArt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OeP-gT-A9F">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -56,23 +56,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmojiArtViewController" customModule="EmojiArt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSS-ZI-XWQ">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2O0-xZ-9qE" customClass="EmojiArtView" customModule="EmojiArt" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAj-eb-Vpa">
+                                        <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="2O0-xZ-9qE" firstAttribute="leading" secondItem="GSS-ZI-XWQ" secondAttribute="leading" id="0ah-Jh-4y9"/>
-                                    <constraint firstItem="2O0-xZ-9qE" firstAttribute="top" secondItem="GSS-ZI-XWQ" secondAttribute="top" id="e6c-mx-jW6"/>
-                                    <constraint firstAttribute="bottom" secondItem="2O0-xZ-9qE" secondAttribute="bottom" id="ita-xV-DNe"/>
-                                    <constraint firstAttribute="trailing" secondItem="2O0-xZ-9qE" secondAttribute="trailing" id="pv7-6q-wTX"/>
+                                    <constraint firstItem="TAj-eb-Vpa" firstAttribute="top" secondItem="GSS-ZI-XWQ" secondAttribute="top" id="3by-LC-paW"/>
+                                    <constraint firstAttribute="trailing" secondItem="TAj-eb-Vpa" secondAttribute="trailing" id="H7C-U9-7q8"/>
+                                    <constraint firstAttribute="bottom" secondItem="TAj-eb-Vpa" secondAttribute="bottom" id="cy2-AA-1Xu"/>
+                                    <constraint firstItem="TAj-eb-Vpa" firstAttribute="leading" secondItem="GSS-ZI-XWQ" secondAttribute="leading" id="zfo-cu-suM"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -87,7 +86,7 @@
                     </view>
                     <connections>
                         <outlet property="dropZone" destination="GSS-ZI-XWQ" id="kzH-Tr-QFx"/>
-                        <outlet property="emojiArtView" destination="2O0-xZ-9qE" id="GEp-ky-MHF"/>
+                        <outlet property="scrollView" destination="TAj-eb-Vpa" id="gqF-Qf-66O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -57,7 +57,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EmojiArtViewController" customModule="EmojiArt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSS-ZI-XWQ">
@@ -133,6 +133,50 @@
                                                 <constraint firstItem="ReY-Yk-K8z" firstAttribute="centerX" secondItem="bBn-Mc-XvH" secondAttribute="centerX" id="a28-c3-LZI"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="AddEmojiButtonCell" id="b4n-zZ-Nm9">
+                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P0k-D9-SBP">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0La-Lk-LJD">
+                                                    <rect key="frame" x="27.5" y="28" width="25" height="24"/>
+                                                    <connections>
+                                                        <action selector="addEmoji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0MR-Bu-BvC"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0La-Lk-LJD" firstAttribute="centerY" secondItem="P0k-D9-SBP" secondAttribute="centerY" id="N5n-9l-O9E"/>
+                                                <constraint firstItem="0La-Lk-LJD" firstAttribute="centerX" secondItem="P0k-D9-SBP" secondAttribute="centerX" id="sl1-WH-gIS"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="EmojiInputCell" id="kgC-id-QAH" customClass="TextFieldCollectionViewCell" customModule="EmojiArt" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hjP-gt-FeL">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBG-YL-HX7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YBG-YL-HX7" firstAttribute="top" secondItem="hjP-gt-FeL" secondAttribute="top" id="1aI-Ff-VSK"/>
+                                                <constraint firstAttribute="trailing" secondItem="YBG-YL-HX7" secondAttribute="trailing" id="1hT-OH-UMq"/>
+                                                <constraint firstItem="YBG-YL-HX7" firstAttribute="leading" secondItem="hjP-gt-FeL" secondAttribute="leading" id="LbZ-Cp-49s"/>
+                                                <constraint firstAttribute="bottom" secondItem="YBG-YL-HX7" secondAttribute="bottom" id="lUQ-63-iT4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="textField" destination="YBG-YL-HX7" id="nu5-rl-MbJ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

@@ -139,6 +139,15 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
             return cell
         } else if addingEmoji {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiInputCell", for: indexPath)
+            if let inputCell = cell as? TextFieldCollectionViewCell {
+                inputCell.resignationHandler = { [weak self, unowned inputCell] in
+                    if let text = inputCell.textField.text {
+                        self?.emojis = (text.map { String($0) } + self!.emojis).uniquified
+                    }
+                    self?.addingEmoji = false
+                    self?.emojiCollectionView.reloadData()
+                }
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddEmojiButtonCell", for: indexPath)
